@@ -286,3 +286,73 @@ const BlogList = (props) => {
 
 export default BlogList;
 ```
+
+---
+
+## useEffect
+
+The `useEffect` hook is a function that fires every time the dom updates. It fires once on initial page/component load and then each time the dom is updated.
+
+```js
+import { useState, useEffect } from "react";
+```
+
+```js
+useEffect(() => {
+  // Code to run
+});
+```
+
+### Dependencies of useEffect
+
+We can control at a more granular level when the `useEffect` hooks fires by adding an array as the second argument:
+
+1. If we only want the hook to fire after the initial page/component load and not on subsequent updates, we add an empty array as the second argument:
+
+```js
+useEffect(() => {
+  // Code to run
+}, []);
+```
+
+2. If we only want `useEffect` to fire when specific properties change we can add those properties to the array:
+
+```js
+useEffect(() => {
+  // Code to run
+}, [dataOne, dataTwo]);
+```
+
+### Fetching data with useEffect
+
+1. set `useEffect` to null:
+
+```js
+const [blogs, setBlogs] = useState(null);
+```
+
+2. we cannot use `async`/`await` directly within `useEffect`, the simple example below uses `fetch` and omits error handling:
+
+```js
+useEffect(() => {
+  fetch("http://localhost:8000/blogs")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      setBlogs(data);
+    });
+}, []);
+```
+
+3. Then to prevent errors from data being initially null we wrap any code with conditional logic to prevent rendering until the property has a value:
+
+```js
+return (
+  <div className="home">
+    {blogs && (
+      <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+    )}
+  </div>
+);
+```
