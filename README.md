@@ -11,8 +11,7 @@ Toc:
 - [Reusing Components](#Reusing-Components)
 - [Functions as Props](#Functions-as-Props)
 - [useEffect Hook](#useEffect-Hook)
-- [Conditional Loading]()
-- [Handling Errors]()
+- [Conditional Loading and Error handling](#Conditional-Loading-and-Error-handling)
 - [Custom Hooks]()
 - [React Router]()
 - [Exact Match Routes]()
@@ -24,6 +23,7 @@ Toc:
 - [HTTP Requests]()
 - [Redirects]()
 - [Error Page]()
+- [JSON Server]()
 
 ---
 
@@ -325,7 +325,7 @@ useEffect(() => {
 
 ### Fetching data with useEffect
 
-1. set `useEffect` to null:
+1. set `useEffect` to null or an empty array:
 
 ```js
 const [blogs, setBlogs] = useState(null);
@@ -355,4 +355,52 @@ return (
     )}
   </div>
 );
+```
+
+---
+
+## Conditional Loading and Error handling
+
+```js
+const Home = () => {
+  const [blogs, setBlogs] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(errorMessage);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/blogs")
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Unable to fetch the data");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setBlogs(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setErrorMessage(error.message);
+      });
+  }, []);
+
+  return (
+    <div className="home">
+      {errorMessage && <div>{errorMessage}</div>}
+      {isLoading && <div>Loading...</div>}
+      {blogs && <BlogList blogs={blogs} title="All Blogs" />}
+    </div>
+  );
+};
+
+export default Home;
+```
+
+---
+
+## JSON Server
+
+```
+npx json-server --watch data/db.json --port 8000
 ```
