@@ -12,7 +12,7 @@ Toc:
 - [Functions as Props](#Functions-as-Props)
 - [useEffect Hook](#useEffect-Hook)
 - [Conditional Loading and Error handling](#Conditional-Loading-and-Error-handling)
-- [Custom Hooks]()
+- [Custom Hooks](#Custom-Hooks)
 - [React Router]()
 - [Exact Match Routes]()
 - [Router Links]()
@@ -289,7 +289,7 @@ export default BlogList;
 
 ---
 
-## useEffect
+## useEffect Hook
 
 The `useEffect` hook is a function that fires every time the dom updates. It fires once on initial page/component load and then each time the dom is updated.
 
@@ -398,6 +398,65 @@ export default Home;
 ```
 
 ---
+
+## Custom Hooks
+
+We can create our own custom hooks, it is required that they start with `use`. The example below extracts the fetch request into a reusable hook that can be used to make fetch requests of different data: `useFetch.js`
+
+```js
+import { useEffect, useState } from "react";
+
+const useFetch = (endpoint) => {
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    fetch(endpoint)
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Unable to fetch the data");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setErrorMessage(error.message);
+      });
+  }, [endpoint]);
+
+  return { data, isLoading, errorMessage };
+};
+
+export default useFetch;
+```
+
+Then within the component it is used we import `useFetch` pass in the endpoint and destruct the properties that are returned:
+
+```js
+import BlogList from "./BlogList";
+import useFetch from "./useFetch";
+
+const Home = () => {
+  const { data, isLoading, errorMessage } = useFetch(
+    "http://localhost:8000/blogs"
+  );
+
+  return (
+    <div className="home">
+      {errorMessage && <div>{errorMessage}</div>}
+      {isLoading && <div>Loading...</div>}
+      {data && <BlogList blogs={data} title="All Blogs" />}
+    </div>
+  );
+};
+
+export default Home;
+```
 
 ## JSON Server
 
