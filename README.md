@@ -14,7 +14,6 @@ Toc:
 - [Conditional Loading and Error handling](#Conditional-Loading-and-Error-handling)
 - [Custom Hooks](#Custom-Hooks)
 - [React Router](#React-Router)
-- [Exact Match Routes]()
 - [Router Links]()
 - [Route Params]()
 - [Reusing Custom Hooks]()
@@ -355,6 +354,42 @@ return (
     )}
   </div>
 );
+```
+
+### useEffect Cleanup
+
+Should the user click away from a page whilst a request is still in process we can programmatically `abort` the request to prevent errors:
+
+1. Create an `AbortController()`
+2. Add as the value of `signal` as the second argument in the fetch request
+3. return from useEffect an anonymous function that calls the `abort()` method on any lingering requests
+4. Add catch logic for the abort event and handle
+
+```js
+useEffect(() => {
+  // 1.
+  const abortController = new AbortController();
+  // 2.
+  fetch("http://localhost:8000/blogs", { signal: abortController.signal })
+    .then((res) => {
+      if (!res.ok) {
+        throw Error("Unable to fetch the data");
+      }
+      return res.json();
+    })
+    .then((data) => {
+      setBlogs(data);
+      setIsLoading(false);
+    })
+    .catch((error) => {
+      if (error.name !== "AbortError") {
+        setIsLoading(false);
+        setErrorMessage(error.message);
+      }
+    });
+  // 3.
+  return () => abortController.abort();
+}, []);
 ```
 
 ---
