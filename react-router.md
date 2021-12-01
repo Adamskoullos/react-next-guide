@@ -242,7 +242,7 @@ const BlogList = (props) => {
       <h1>{title}</h1>
       <button
         onClick={() => {
-          navigate("/page");
+          navigate("/page", { propOne: 1 });
         }}
       >
         Page
