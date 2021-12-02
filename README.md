@@ -493,6 +493,89 @@ const Home = () => {
 export default Home;
 ```
 
+### Reusing CUstom Hooks
+
+The below example uses `useFetch` within the `BlogDetails` component rather than the data being passed in. In this case the `id` params is used when grabing the blog details within the component:
+
+```js
+import { useParams } from "react-router";
+import useFetch from "./useFetch";
+
+const BlogDetails = () => {
+  const { id } = useParams();
+  const {
+    data: blog,
+    isLoading,
+    errorMessage,
+  } = useFetch(`http://localhost:8000/blogs/${id}`);
+
+  return (
+    <div>
+      {isLoading && <div>Loading...</div>}
+      {errorMessage && <div>{errorMessage}</div>}
+      {blog && (
+        <article>
+          <h2>{blog.title}</h2>
+          <p>Written by {blog.author}</p>
+          <div>{blog.body}</div>
+        </article>
+      )}
+    </div>
+  );
+};
+
+export default BlogDetails;
+```
+
+---
+
+## Forms - Controlled Inputs
+
+1. create local state for each input, or assign incoming data to local state
+2. Add the `value` and `onChange` attribute to each input
+
+```js
+import { useState } from "react";
+
+const NewBlog = () => {
+  const [title, setTile] = useState("");
+  const [body, setBody] = useState("");
+  const [author, setAuthor] = useState("");
+
+  return (
+    <div className="create">
+      <h2>Add a new blog</h2>
+      <form>
+        <label>Tile:</label>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTile(e.target.value)}
+          required
+        />
+        <label>Body:</label>
+        <textarea
+          required
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+        ></textarea>
+        <label>Author:</label>
+        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
+          <option value=""></option>
+          <option value="dave">Dave</option>
+          <option value="joan">Joan</option>
+        </select>
+        <button>Add Blog</button>
+      </form>
+    </div>
+  );
+};
+
+export default NewBlog;
+```
+
+---
+
 ## JSON Server
 
 ```
