@@ -690,6 +690,31 @@ export default BlogDetails;
 
 ---
 
+## Error Page
+
+1. Create Error page:
+
+```js
+import { Link } from "react-router-dom";
+
+const ErrorPage = () => {
+  return (
+    <div className="not-found">
+      <h2>That page cannot be found</h2>
+      <Link to="/">Home</Link>
+    </div>
+  );
+};
+
+export default ErrorPage;
+```
+
+2. Add catch all route within `Router`, **As the last `Route`**:
+
+```js
+<Route path="*" element={<ErrorPage />} />
+```
+
 ## JSON Server
 
 ```
