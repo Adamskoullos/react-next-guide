@@ -529,7 +529,9 @@ export default BlogDetails;
 
 ---
 
-## Forms - Controlled Inputs
+## Forms
+
+### Controlled Inputs
 
 1. create local state for each input, or assign incoming data to local state
 2. Add the `value` and `onChange` attribute to each input
@@ -572,6 +574,118 @@ const NewBlog = () => {
 };
 
 export default NewBlog;
+```
+
+### Posting form data and redirecting user
+
+```js
+const NewBlog = () => {
+  const navigate = useNavigate();
+
+  const [title, setTile] = useState("");
+  const [body, setBody] = useState("");
+  const [author, setAuthor] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    if (!title || !body || !author) {
+      return;
+    }
+
+    const newBlog = {
+      title,
+      body,
+      author,
+    };
+
+    fetch("http://localhost:8000/blogs", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(newBlog),
+    }).then((res) => {
+      setIsLoading(false);
+      navigate("/");
+    });
+  };
+
+  return (
+    <div className="create">
+      <h2>Add a new blog</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Tile:</label>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTile(e.target.value)}
+          required
+        />
+        <label>Body:</label>
+        <textarea
+          required
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+        ></textarea>
+        <label>Author:</label>
+        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
+          <option value=""></option>
+          <option value="dave">Dave</option>
+          <option value="joan">Joan</option>
+        </select>
+        {isLoading && <button disabled>Submitting...</button>}
+        {!isLoading && <button>Add Blog</button>}
+      </form>
+    </div>
+  );
+};
+
+export default NewBlog;
+```
+
+---
+
+## Deleting Blogs
+
+```js
+import { useNavigate, useParams } from "react-router";
+import useFetch from "./useFetch";
+
+const BlogDetails = () => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+  const {
+    data: blog,
+    isLoading,
+    errorMessage,
+  } = useFetch(`http://localhost:8000/blogs/${id}`);
+
+  const handleDelete = (e) => {
+    fetch(`http://localhost:8000/blogs/${id}`, {
+      method: "DELETE",
+    }).then((res) => {
+      navigate("/");
+    });
+  };
+
+  return (
+    <div>
+      {isLoading && <div>Loading...</div>}
+      {errorMessage && <div>{errorMessage}</div>}
+      {blog && (
+        <article className="blog-details">
+          <h2>{blog.title}</h2>
+          <p>Written by {blog.author}</p>
+          <p>{blog.body}</p>
+          <button onClick={handleDelete}>Delete</button>
+        </article>
+      )}
+    </div>
+  );
+};
+
+export default BlogDetails;
 ```
 
 ---
