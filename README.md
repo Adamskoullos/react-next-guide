@@ -4,7 +4,7 @@ Reference guide for getting up and running with React
 
 Toc:
 
-- [Basic Nuts and Bolts]()
+- [Basic Nuts and Bolts](https://github.com/Adamskoullos/react-guide/blob/main/basics.md)
   - [Click Events](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#Click-Events)
   - [useState Hook](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#usestate-hook)
   - [Outputting Lists](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#outputting-lists)
