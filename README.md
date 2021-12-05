@@ -13,7 +13,7 @@ Toc:
   - [Functions as Props](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#functions-as-props)
   - [useEffect Hook](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#useeffect-hook)
   - [Conditional Loading and Error handling](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#conditional-loading-and-error-handling)
-  - [Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#conditional-loading-and-error-handling)
+  - [Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#custom-hooks)
   - [Reusing Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#reusing-custom-hooks)
   - [Forms (Controlled Inputs)](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#forms) & Requests
   - [Redirects](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#posting-form-data-and-redirecting-user)
