@@ -3,6 +3,7 @@
 Toc:
 
 - [Click Events](#Click-Events)
+- [Conditional Styling](#Conditional-Styling)
 - [useState Hook](#useState-Hook)
 - [Outputting Lists](#Outputting-Lists)
 - [Props](#Props)
@@ -41,6 +42,14 @@ const Home = () => {
 };
 
 export default Home;
+```
+
+---
+
+## Conditional Styling
+
+```js
+style={(item.checked) ? {textDecoration: 'line-through'} : null}
 ```
 
 ---
