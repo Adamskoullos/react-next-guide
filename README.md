@@ -6,7 +6,7 @@ Toc:
 
 - [Basic Nuts and Bolts](https://github.com/Adamskoullos/react-guide/blob/main/basics.md)
   - [Click Events](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#Click-Events)
-  - [Conditional Styling]()
+  - [Conditional Styling](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#conditional-styling)
   - [useState Hook](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#usestate-hook)
   - [Outputting Lists](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#outputting-lists)
   - [Props](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#props)
