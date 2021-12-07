@@ -14,6 +14,7 @@ Toc:
 - [Custom Hooks](#Custom-Hooks)
 - [Reusing Custom Hooks](#Reusing-Custom-Hooks)
 - [Forms (Controlled Inputs)](#Forms) & Requests
+- [Search](#Search)
 - [Redirects](#Redirects)
 - [Error Page](#Error-Page)
 - [JSON Server](#JSON-Server)
@@ -688,6 +689,57 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
+```
+
+---
+
+## Search
+
+Using a form input to filter a list of items. The below example creates the `search` state within the parent component which has both the `SearchItems` and `ItemsList` child components. All `state` properties and `setState` functions are defined in the parent component and passed down to the children. This means that events do not need to be emitted up as the functions passed down have access to parent reactive state.
+
+Example below is only showing part of the component code and omits where the `data` has come from.
+
+Parent:
+
+```js
+const APP = () => {
+  const [search, setSearch] = useState('');
+  const [items, setItems] = useState(data);
+
+  return (
+    <SearchItems search={search} setSearch={setSearch} />
+    <ItemsList
+      items={items.filter(item => (item.item).toLowerCase().includes(search.toLowerCase()))}
+      handleCheck={handleCheck}
+      handleDelete={handleDelete}
+    />
+  );
+};
+
+export default APP;
+```
+
+Child:
+
+Every time the user updates the inner text within the input the value of `search` updates.
+
+```js
+const SearchItems = () => {
+  return (
+    <form onSubmit={(e) => e.preventDefault()}>
+      <label htmlFor='search'>Search</label>
+      <input
+        id='search'
+        type='text'
+        role='searchbox'
+        placeholder='Search Items'
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    <form/>
+  )
+}
+
 ```
 
 ---

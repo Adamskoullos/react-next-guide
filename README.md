@@ -17,7 +17,9 @@ Toc:
   - [Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#custom-hooks)
   - [Reusing Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#reusing-custom-hooks)
   - [Forms (Controlled Inputs)](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#forms) & Requests
+  - [Search]()
   - [Redirects](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#posting-form-data-and-redirecting-user)
   - [Error Page](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#error-page)
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/react-router.md)
-- []()
+- [Hooks]()
+- [Working with Local Storage]()
