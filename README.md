@@ -22,4 +22,7 @@ Toc:
   - [Error Page](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#error-page)
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/react-router.md)
 - [Hooks]()
+- [Context]()
+- [Redux]()
+- [Folder Structure]()
 - [Working with Local Storage]()
