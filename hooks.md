@@ -220,6 +220,29 @@ const inputRef = useRef(null);
 
 # useContext
 
+[See Context API](https://github.com/Adamskoullos/react-guide/blob/main/context.md)
+
 # useMemo
+
+If an event is triggered that re-renders a component, by default the whole component is re-rendered...re-running functions and undertaking computations and returning values from data that might not have even been changed. This effects performance.
+
+`useMemo`, like `useEffect` can target specific properties and only re-run specified functions if that piece of data is changed. this reduces needless tasks from running, improving performance.
+
+The example below assumes a large array of data is being used to filter for a specific item. In this case we only want to run the filter algo if the data coming in changes.
+
+1. Import `useMemo`
+2. Instead of just running the function, pass the function into the `useMemo` function as the first argument. The second argument is the data array. The `useMemo` function invokes the subject function only when the data within the data array changes:
+
+Note: The example below omits the `findLongestName()` definition.
+
+```js
+import { useMemo } from "react";
+
+// Within the functional component
+
+const getLongestName = useMemeo(() => findLongestName(data), [data]);
+```
+
+In the example above `findLongestName()` only runs if `useMemo` is triggered. This only happens if the data within the data array changes.
 
 # useCallback
