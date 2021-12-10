@@ -240,9 +240,58 @@ import { useMemo } from "react";
 
 // Within the functional component
 
-const getLongestName = useMemeo(() => findLongestName(data), [data]);
+const getLongestName = useMemo(() => findLongestName(data), [data]);
 ```
 
 In the example above `findLongestName()` only runs if `useMemo` is triggered. This only happens if the data within the data array changes.
 
+## memo
+
+Similar to `useMemo`, memo prevents a component from rerendering if there has been no change to any data being passed in.
+This works when dealing with data, if functions are being passed down we need to use `useCallback`.
+Just import `memo` and then wrap the exported component:
+
+```js
+import { memo } from "react";
+
+// Component code
+
+export default memo(Component);
+```
+
+> The above works well for read only components
+
 # useCallback
+
+**Note**:
+
+- `useMemo` returns a value from the function passed in
+- `useCallback` returns a function
+
+`useCallback` is used to prevent the default re-creation of a function that is being passed down to a child component if the component is rerendered. This is done with the same pattern as `useMemo`.
+
+The below uses `useCallback` so if the parent and child components rerender, the `getItems` will not be recreated unless the value of `num` has changed:
+
+**Parent**:
+
+```js
+import { useCallback } from "react";
+
+// Inside component
+
+// Without useCallback
+const getItems = () => {
+  return [num, num+1, num+2]
+}
+
+// With useCallback
+const getItems = useCallback(() => {
+  return [num, num+1, num+2]
+}, [num])
+
+
+// Template with child component passing down the getItems function
+<List getItems={getItems}>
+
+
+```
