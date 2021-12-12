@@ -26,6 +26,10 @@ React provides a blank canvas when it comes to folder structure below are some g
         index.js
     /context
     /redux
+        store.js
+        /features
+            dataOneSlice.js
+            dataTwoSlice.js
     /scss
         /variables
     /services
