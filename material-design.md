@@ -9,6 +9,7 @@ Quick reference for the nuts and bolts of MUI
 - [Styles](https://github.com/Adamskoullos/react-guide/blob/main/mui-styles.md)
 - [System (Utilities)]()
 - [Grid](https://github.com/Adamskoullos/react-guide/blob/main/grid.md)
+- [Data Tables & Pagination](https://github.com/Adamskoullos/react-guide/blob/main/tables.md)
 
 ---
 
