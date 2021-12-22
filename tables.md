@@ -5,6 +5,8 @@ Below is a stripped back example pattern for a data table with `sorting` and `pa
 - Parent `TableContent` component
 - Child `TableHeader` component
 
+---
+
 **Parent TableContent**:
 
 The parent component `TableContent` is split up so as to break each section down.
@@ -28,7 +30,7 @@ import TableHeader from "./TableHeader";
 The next section of the parent file includes:
 
 1. Dummy data that is either passed down or pulled in within the component
-2. The main `sortData` function that recalculates the data array every time the user clicks the order/soring items in the table header
+2. The main `sortData` function that recalculates the data array every time the user clicks the order/sorting items in the table header
 3. Helper functions used within `sortData`
 
 ```js
@@ -49,11 +51,11 @@ function descComparator (a,b,orderBy) {
 
 // Helper function used within sortData
 function getComparator (orderDirection, orderBy) {
-  return order === 'desc'
+  return orderDirection === 'desc'
     ? (a, b) => descComparator(a,b,orderBy)
     : (a, b) => -descComparator(a,b,orderBy)
 }
-// Magic function htat orders and sorts the array every time the header items are clicked
+// Magic function that orders and sorts the array every time the header items are clicked
 const sortData = (rowArray, comparator) => {
   const tempArr = rowArray.map((item, index) => [item, index]);
   tempArr.sort((a,b) => {
@@ -66,7 +68,8 @@ const sortData = (rowArray, comparator) => {
 
 ```
 
-The below section includes the state and the `handleSort` function all of which are passed down to the `TableHeader`
+The below section includes the state and the `handleSort` function all of which are passed down to the `TableHeader`.
+The two pagination functions are used within the `TablePagination` component.
 
 ```js
 
@@ -82,6 +85,13 @@ export default function TableContent(props) {
     const isAscending = (orderBy === property && orderDirection === 'asc');
     setOrderBy(property);
     setOrderDirection(isAscending ? 'desc' : 'asc');
+  }
+  // Pagination >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  const handleChangePage = (event, newPage) => {setPage(newPage);}
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value), 10);
+    setPage(0);
   }
 ```
 
@@ -113,7 +123,16 @@ The main structure of the table below includes:
           }
         </Table>
       </TableContainer>
-    </>
+      <TablePagination
+        rowsPerPageOptions={[1,2]}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        component="div"
+        count={data.length}
+        onChangePage={handleChangePage}
+        onChangeRowsPerPage={handleChangeRowsPerPage}
+      />
+    </TablePagination>
   )
 }
 ```
@@ -125,6 +144,8 @@ The main structure of the table below includes:
 ```js
 /components/tables/TableHeader
 ```
+
+The below example hard codes each column but this could come from an array of objects and be produced by mapping each `TableCell`.
 
 ```jsx
 import * as React from "react";
@@ -152,6 +173,8 @@ export default function TableHeader(props) {
           >
             Name
           </TableSortLabel>
+        </TableCell>
+        <TableCell key="age">
           <TableSortLabel
             active={orderBy === "age"}
             direction={orderBy === "age" ? orderDirection : "asc"}
@@ -164,10 +187,4 @@ export default function TableHeader(props) {
     </TableHead>
   );
 }
-```
-
-**Page Component**:
-
-```js
-
 ```
