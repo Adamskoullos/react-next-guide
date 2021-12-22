@@ -1,4 +1,4 @@
-# React Guide
+# React / Next Guide
 
 Reference guide for getting up and running with React
 
