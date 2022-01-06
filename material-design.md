@@ -7,7 +7,7 @@ Quick reference for the nuts and bolts of MUI
 - [Button](#Button)
 - [Forms](https://github.com/Adamskoullos/react-guide/blob/main/mui-forms.md)
 - [Styles](https://github.com/Adamskoullos/react-guide/blob/main/mui-styles.md)
-- [Grid](https://github.com/Adamskoullos/react-guide/blob/main/grid.md)
+- [Layout & Grid](https://github.com/Adamskoullos/react-guide/blob/main/grid.md)
 - [Data Tables & Pagination](https://github.com/Adamskoullos/react-guide/blob/main/tables.md)
 - [Card]()
 - [Layout Component]()
@@ -31,6 +31,15 @@ npm install @mui/icons-material
 
 **Fonts**: Add any Google fonts directly in the head or install via `Fontsource` with npm
 
+```html
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+```
+
+Or
+
 ```js
 npm install @fontsource/roboto
 ```
@@ -40,6 +49,18 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+```
+
+1. Clear out `App.css` > To be used for classes that style specific standard html elements
+2. Clear out `index.css` and add basic reset:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
 ```
 
 ---

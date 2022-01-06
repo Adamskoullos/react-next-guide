@@ -1,9 +1,35 @@
 # Grid System
 
+- [Application Layout Pattern](#Layout)
 - [Grid Flex Patterns](#Grid-Flex-Patterns)
 - [Break Points](#Break-Points)
 - [Grid](#Grid)
 - [Nested Grids](#Nested-Grids)
+
+---
+
+### Layout
+
+```js
+// function App() {
+//   return (
+//     <ThemeProvider theme={appTheme}>
+//       <Paper style={{ height: "100vh", borderRadius: 0 }}>
+//         <Router>
+//           <div className="App">
+//             <Navbar />
+//             <div className="content" maxWidth="xl">
+//               <Routes>
+//                 <Route path="/" element={<Home someProp={true} />} />
+//               </Routes>
+//             </div>
+//           </div>
+//         </Router>
+//       </Paper>
+//     </ThemeProvider>
+//   )
+// }
+```
 
 ---
 
