@@ -30,6 +30,7 @@ Toc:
 - [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/folder-structure.md)
 - [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/local-storage.md)
 - [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/material-design.md)
+- [Next](https://github.com/Adamskoullos/next-toolbox)
 
 ---
 
