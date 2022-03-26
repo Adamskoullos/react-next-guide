@@ -71,7 +71,7 @@ const [state, dispatch] = useReducer(reducer, { count: 0, showText: false });
 <button
   onClick={() => {
     dispatch({ type: "increment" });
-    dispatch({ typr: "toggleShowText" });
+    dispatch({ type: "toggleShowText" });
   }}
 >
   Update Dom
@@ -214,7 +214,7 @@ const inputRef = useRef(null);
 
 # useLayoutEffect
 
-`useEffectLayout` works in the same way as `useEffect` however `useEffectLayout` is triggered earlier within the component lifecycle, before the page is rendered, where `useEffect` is triggered after the page is rendered or after the component has mounted the dom.
+`useLayoutEffect` works in the same way as `useEffect` however `useLayoutEffect` is triggered earlier within the component lifecycle, before the page is rendered, where `useEffect` is triggered after the page is rendered or after the component has mounted the dom.
 
 # useImperativeHandle
 

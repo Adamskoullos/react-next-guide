@@ -327,13 +327,13 @@ useEffect(() => {
 
 ### Fetching data with useEffect
 
-1. set `useEffect` to null or an empty array:
+1. set the initial value of `blogs` to null or an empty array:
 
 ```js
 const [blogs, setBlogs] = useState(null);
 ```
 
-2. we cannot use `async`/`await` directly within `useEffect`, the simple example below uses `fetch` and omits error handling:
+2. we cannot use `async`/`await` directly on the `useEffect` callback, the simple example below uses `fetch` and omits error handling:
 
 ```js
 useEffect(() => {

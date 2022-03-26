@@ -1,7 +1,5 @@
 # React Router v6
 
-- []()
-
 ```js
 import {
   BrowserRouter as Router,
@@ -163,7 +161,7 @@ export default BlogDetails;
 
 ### Outlet
 
-If we want to use sub-pages or tabs within a parent page we can use `Outlet` a kind of slot. To do this we need to nest the child routes `:course` within the parent route:
+If we want to use sub-pages or tabs within a parent page we can use `Outlet` a kind of slot. To do this we need to nest the child routes `:id` within the parent route:
 
 ```js
 <Routes>
