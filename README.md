@@ -4,33 +4,33 @@ Toolbox for React, Next, Redux, Redux-Toolkit, MUI.
 
 Toc:
 
-- [Basic Nuts and Bolts](https://github.com/Adamskoullos/react-guide/blob/main/basics.md)
-  - [Click Events](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#Click-Events)
-  - [Conditional Styling](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#conditional-styling)
-  - [useState Hook](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#usestate-hook)
-  - [Outputting Lists](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#outputting-lists)
-  - [Props](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#props)
-  - [Reusing Components](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#reusing-components)
-  - [Functions as Props](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#functions-as-props)
-  - [useEffect Hook](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#useeffect-hook)
-  - [Conditional Loading and Error handling](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#conditional-loading-and-error-handling)
-  - [Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#custom-hooks)
-  - [Reusing Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#reusing-custom-hooks)
-  - [Forms (Controlled Inputs)](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#forms) & Requests
-  - [Search](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#search)
-  - [Redirects](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#posting-form-data-and-redirecting-user)
-  - [Error Page](https://github.com/Adamskoullos/react-guide/blob/main/basics.md#error-page)
+- [Basic Nuts and Bolts](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md)
+  - [Click Events](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#Click-Events)
+  - [Conditional Styling](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#conditional-styling)
+  - [useState Hook](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#usestate-hook)
+  - [Outputting Lists](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#outputting-lists)
+  - [Props](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#props)
+  - [Reusing Components](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#reusing-components)
+  - [Functions as Props](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#functions-as-props)
+  - [useEffect Hook](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#useeffect-hook)
+  - [Conditional Loading and Error handling](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#conditional-loading-and-error-handling)
+  - [Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#custom-hooks)
+  - [Reusing Custom Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#reusing-custom-hooks)
+  - [Forms (Controlled Inputs)](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#forms) & Requests
+  - [Search](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#search)
+  - [Redirects](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#posting-form-data-and-redirecting-user)
+  - [Error Page](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#error-page)
 
 ---
 
-- [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/react-router.md)
-- [Hooks](https://github.com/Adamskoullos/react-guide/blob/main/hooks.md)
-- [Context](https://github.com/Adamskoullos/react-guide/blob/main/context.md)
-- [Redux & Redux Toolkit](https://github.com/Adamskoullos/react-guide/blob/main/redux.md)
-- [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/folder-structure.md)
-- [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/local-storage.md)
-- [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/material-design.md)
+- [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
+- [Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/hooks.md)
+- [Context](https://github.com/Adamskoullos/react-guide/blob/main/core/context.md)
+- [Redux & Redux Toolkit](https://github.com/Adamskoullos/react-guide/blob/main/core/redux.md)
+- [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/core/folder-structure.md)
+- [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/core/local-storage.md)
+- [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
 
 ---
 
-- [API Workflows](https://github.com/Adamskoullos/react-next-guide/blob/main/api-workflows.md)
+- [API Workflows](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
