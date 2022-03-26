@@ -1,6 +1,6 @@
-# React / Next Guide
+# React Toolbox
 
-Toolbox for React, Next, Redux, Redux-Toolkit, MUI.
+Toolbox for React, Redux, Redux-Toolkit, MUI.
 
 Toc:
 
