@@ -20,12 +20,17 @@ Toc:
   - [Search](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#search)
   - [Redirects](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#posting-form-data-and-redirecting-user)
   - [Error Page](https://github.com/Adamskoullos/react-guide/blob/main/core/basics.md#error-page)
+- [Components Deep Dive](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/components.md)
+- [Forms Deep Dive](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/forms.md)
 
 ---
 
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
 - [Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/hooks.md)
+- [Custom Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/custom-hooks.md)
 - [Context](https://github.com/Adamskoullos/react-guide/blob/main/core/context.md)
+- [Internal State Management](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/internal-state-management.md)
+- [Redux Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-basics.md)
 - [Redux & Redux Toolkit](https://github.com/Adamskoullos/react-guide/blob/main/core/redux.md)
 - [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/core/folder-structure.md)
 - [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/core/local-storage.md)
