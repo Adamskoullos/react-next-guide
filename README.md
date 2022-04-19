@@ -5,9 +5,9 @@ Toolbox for React, Redux, Redux-Toolkit, MUI.
 Toc:
 
 - [React - Redux & TypeScript]()
-  - [React - TS Basics]()
-  - [Redux - TS Basics]()
-  - [Redux Toolkit - TS]()
+  - [React - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-basics.md)
+  - [Redux Toolkit - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
+  - [Redux Toolkit - TS Deep Dive]()
 
 ---
 
