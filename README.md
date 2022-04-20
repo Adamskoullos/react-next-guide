@@ -1,13 +1,16 @@
 # React Toolbox
 
-Toolbox for React, Redux, Redux-Toolkit, MUI.
-
 Toc:
 
 - [React - Redux & TypeScript]()
   - [React - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-basics.md)
-  - [Redux Toolkit - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
-  - [Redux Toolkit - TS Deep Dive]()
+  - [React - TS Components Deep Dive]() in-progress
+  - [React - TS - Hooks]() todo
+  - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
+  - [RTK - TS createAsyncThunk]() todo
+  - [RTK - TS createEntityAdapter]() todo
+  - [RTK - TS createSelector]() > Create memoized selectors > todo
+  - [RTK - Using normalized data]() todo
 
 ---
 
@@ -42,6 +45,7 @@ Toc:
 - [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/core/folder-structure.md)
 - [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/core/local-storage.md)
 - [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
+- [Styling]() todo
 
 ---
 
