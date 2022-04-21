@@ -1,10 +1,13 @@
 # React Toolbox
 
+- [Pro React - TS Cheatsheet](https://github.com/typescript-cheatsheets/react)
+
 Toc:
 
-- [React - Redux & TypeScript]()
+- [React - RTK & TypeScript]()
   - [React - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-basics.md)
-  - [React - TS Components Deep Dive]() in-progress
+  - [React - TS Context API]() todo
+  - [React - TS Components Deep Dive](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-components.md) Refactor
   - [React - TS - Hooks]() todo
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
   - [RTK - TS createAsyncThunk]() todo
