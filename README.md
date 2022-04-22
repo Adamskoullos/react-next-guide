@@ -7,7 +7,7 @@ Toc:
 - [React - RTK & TypeScript]()
   - [React - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-basics.md)
   - [React - TS Components Deep Dive](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-components.md)
-  - [React - TS - Hooks]() in-progress
+  - [React - TS - Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-hooks.md)
   - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
   - [RTK - TS createAsyncThunk]() todo
@@ -38,6 +38,7 @@ Toc:
 
 ---
 
+- [Styling]() in-progress
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
 - [Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/hooks.md)
 - [Custom Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/custom-hooks.md)
@@ -48,7 +49,6 @@ Toc:
 - [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/core/folder-structure.md)
 - [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/core/local-storage.md)
 - [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
-- [Styling]() todo
 
 ---
 
