@@ -6,9 +6,9 @@ Toc:
 
 - [React - RTK & TypeScript]()
   - [React - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-basics.md)
-  - [React - TS Context API]() todo
-  - [React - TS Components Deep Dive](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-components.md) Refactor
-  - [React - TS - Hooks]() todo
+  - [React - TS Components Deep Dive](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-components.md)
+  - [React - TS - Hooks]() in-progress
+  - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
   - [RTK - TS createAsyncThunk]() todo
   - [RTK - TS createEntityAdapter]() todo
