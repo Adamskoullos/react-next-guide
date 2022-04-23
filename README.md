@@ -10,10 +10,9 @@ Toc:
   - [React - TS - Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-hooks.md)
   - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
-  - [RTK - TS createAsyncThunk]() todo
+  - [RTK - TS createAsyncThunk](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/thunk.md) todo
   - [RTK - TS createEntityAdapter]() todo
   - [RTK - TS createSelector]() > Create memoized selectors > todo
-  - [RTK - Using normalized data]() todo
 
 ---
 
@@ -39,6 +38,7 @@ Toc:
 ---
 
 - [Styling with Emotion and Styled Components](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/styling.md)
+- [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
 - [Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/hooks.md)
 - [Custom Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/custom-hooks.md)
@@ -48,7 +48,6 @@ Toc:
 - [Redux & Redux Toolkit](https://github.com/Adamskoullos/react-guide/blob/main/core/redux.md)
 - [Folder Structure](https://github.com/Adamskoullos/react-guide/blob/main/core/folder-structure.md)
 - [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/core/local-storage.md)
-- [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
 
 ---
 
