@@ -38,7 +38,7 @@ Toc:
 
 ---
 
-- [Styling]() in-progress
+- [Styling with Emotion and Styled Components](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/styling.md)
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
 - [Hooks](https://github.com/Adamskoullos/react-guide/blob/main/core/hooks.md)
 - [Custom Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/custom-hooks.md)
