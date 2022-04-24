@@ -1,6 +1,6 @@
 # React Toolbox
 
-- [Pro React - TS Cheatsheet](https://github.com/typescript-cheatsheets/react)
+- [Pro React - TS Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/)
 
 Toc:
 
@@ -11,8 +11,7 @@ Toc:
   - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
   - [RTK - TS createAsyncThunk](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/thunk.md) Needs second pass to dial in the typing for each workflow and options handling
-  - [RTK - TS createEntityAdapter]() todo
-  - [RTK - TS createSelector]() > Create memoized selectors > todo
+  - [RTK - TS createEntityAdapter](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/entity-adapter.md) Started
 
 ---
 
