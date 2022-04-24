@@ -10,7 +10,7 @@ Toc:
   - [React - TS - Hooks](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-hooks.md)
   - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
-  - [RTK - TS createAsyncThunk](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/thunk.md) todo
+  - [RTK - TS createAsyncThunk](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/thunk.md) Needs second pass to dial in the typing for each workflow and options handling
   - [RTK - TS createEntityAdapter]() todo
   - [RTK - TS createSelector]() > Create memoized selectors > todo
 
