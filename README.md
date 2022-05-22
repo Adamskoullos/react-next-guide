@@ -36,6 +36,7 @@ Toc:
 
 ---
 
+- [RTK Query](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
 - [Styling with Emotion and Styled Components](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/styling.md)
 - [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
@@ -49,5 +50,3 @@ Toc:
 - [Working with Local Storage](https://github.com/Adamskoullos/react-guide/blob/main/core/local-storage.md)
 
 ---
-
-- [API Workflows](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
