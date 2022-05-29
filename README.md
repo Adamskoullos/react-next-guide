@@ -11,7 +11,14 @@ Toc:
   - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
   - [RTK - TS createAsyncThunk](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/thunk.md) Needs second pass to dial in the typing for each workflow and options handling
-  - [RTK - TS createEntityAdapter](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/entity-adapter.md) Started
+
+---
+
+- [RTK Query Basics](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
+- [RTK createSelector]()
+- [RTK createEntityAdapter](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/entity-adapter.md) Started
+- [RTK createListenerMiddleware]()
+- [RTK Query Advanced Patterns]()
 
 ---
 
@@ -36,7 +43,6 @@ Toc:
 
 ---
 
-- [RTK Query](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
 - [Styling with Emotion and Styled Components](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/styling.md)
 - [Material UI](https://github.com/Adamskoullos/react-guide/blob/main/core/material-design.md)
 - [React Router v6](https://github.com/Adamskoullos/react-guide/blob/main/core/react-router.md)
