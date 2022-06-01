@@ -15,10 +15,10 @@ Toc:
 ---
 
 - [RTK Query Basics](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
+- [RTK Query Advanced Patterns]() Todo
 - [RTK createSelector]() Todo
 - [RTK createEntityAdapter](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/entity-adapter.md)
 - [RTK createListenerMiddleware]() Todo
-- [RTK Query Advanced Patterns]() Todo
 
 ---
 
