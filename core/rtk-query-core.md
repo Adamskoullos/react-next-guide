@@ -12,7 +12,7 @@ Typical folder structure:
     /todos
 ```
 
-Within the `endpoits` function below the passed in `builder` object provides two key methods:
+Within the `endpoints` function below, the passed in `builder` object provides two key methods:
 
 1. `query` > used for `GET` requests
 2. `mutation` > used for `POST`, `PATCH`, `PUT` methods
