@@ -16,7 +16,7 @@ Toc:
 
 - [RTK Query Basics](https://github.com/Adamskoullos/react-next-guide/blob/main/core/api-workflows.md)
 - [RTK Query Core Patterns](https://github.com/Adamskoullos/react-next-guide/blob/main/core/rtk-query-core.md)
-- [RTK Query Advanced Patterns]() Todo
+- [RTK Query Advanced Patterns](https://github.com/Adamskoullos/react-next-guide/blob/main/core/rtk-query-advanced.md) Todo
 - [RTK createSelector](https://github.com/Adamskoullos/react-next-guide/blob/main/core/createSelector.md)
 - [RTK createEntityAdapter](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/entity-adapter.md)
 - [RTK createListenerMiddleware]() Todo
