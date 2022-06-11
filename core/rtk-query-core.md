@@ -144,7 +144,3 @@ onClick={() => deleteTodo({id: todo.id})}
 ```
 
 ---
-
-## Porting From Reducers
-
----
