@@ -33,6 +33,20 @@ export const apiSlice = createApi({
 });
 ```
 
+We add the `apiSlice` to the store and add the apiSlice middleware to the default middleware array:
+
+```js
+import { configureStore } from "@reduxjs/toolkit";
+import { apiSlice } from "../features/api/apiSlice";
+
+export const store = configureStore({
+  reducer: {
+    [apiSlice.reducerPath]: apiSlice.reducer,
+  },
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(apiSlice.middleware);
+});
+```
+
 We then create a slice as normal but instead of using `createSlice` and using reducers, we use `apiSlice.injectEndpoints({...})` which we pass an object into with the `endpoints` for that slice. This allows for different slices/endpoints for each data/feature to be injected into the main app wide `apiSlice`.
 
 `postsSlice.js`
@@ -201,4 +215,12 @@ export const {
 } = postsAdapter.getSelectors(
   (state) => selectPostsData(state) ?? initialState
 );
+```
+
+---
+
+We then ammend the root `index.js` file if we want to load the data on initial app load:
+
+```js
+// to come
 ```
