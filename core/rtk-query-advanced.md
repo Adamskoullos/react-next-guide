@@ -47,6 +47,23 @@ export const store = configureStore({
 });
 ```
 
+Then we can wrap the app with the store provider as normal:
+
+```js
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/*" element={<App />} />
+        </Routes>
+      </Router>
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+```
+
 We then create a slice as normal but instead of using `createSlice` and using reducers, we use `apiSlice.injectEndpoints({...})` which we pass an object into with the `endpoints` for that slice. This allows for different slices/endpoints for each data/feature to be injected into the main app wide `apiSlice`.
 
 `postsSlice.js`
@@ -222,5 +239,42 @@ export const {
 We then ammend the root `index.js` file if we want to load the data on initial app load:
 
 ```js
-// to come
+import { extendedApiSlice } from "./features/posts/postsSlice";
+
+store.dispatch(extendedApiSlice.endpoints.getPosts.initiate());
+```
+
+---
+
+Then within the posts component the app has already made the call to get the posts, but we can use the `useGetPostsQuery` to grab the request status props and then also import `selectPostIds` selector to be used with `useSelector` to grab the ordered ids array, which is then used to create a list of post excerpts.
+
+We could grab the data directly from `useGetPostsQuery` but doing it this way via a selector allows the soerting logic to be extracted away within the slice.
+
+`PostsList`
+
+```js
+import { useSelector } from "react-redux";
+import { selectPostIds } from "./postsSlice";
+import PostsExcerpt from "./PostsExcerpt";
+import { useGetPostsQuery } from "./postsSlice";
+
+const PostsList = () => {
+  const { isLoading, isSuccess, isError, error } = useGetPostsQuery();
+
+  const orderedPostIds = useSelector(selectPostIds);
+
+  let content;
+  if (isLoading) {
+    content = <p>"Loading..."</p>;
+  } else if (isSuccess) {
+    content = orderedPostIds.map((postId) => (
+      <PostsExcerpt key={postId} postId={postId} />
+    ));
+  } else if (isError) {
+    content = <p>{error}</p>;
+  }
+
+  return <section>{content}</section>;
+};
+export default PostsList;
 ```
