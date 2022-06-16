@@ -1,7 +1,7 @@
 ## RTK Query API Advanced
 
 - [Core Pattern](#Core-Pettern)
-- [Tags](Tags)
+- [Tags](#Tags)
 
 ---
 
