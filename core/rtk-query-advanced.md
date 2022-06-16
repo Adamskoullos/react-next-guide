@@ -1,5 +1,12 @@
 ## RTK Query API Advanced
 
+- [Core Pattern](#Core-Pettern)
+- [Tags](Tags)
+
+---
+
+## Core Pattern
+
 The pattern creates an app wide `apiSlice` that incorporates multiple `slices` and takes advantage of normailised data and selectors with the use of the `createEntityAdapter` api. This also allows us to ulitlise the adapter methods within each slice maintaining the normalised data structure.
 
 Folder structure:
@@ -278,3 +285,13 @@ const PostsList = () => {
 };
 export default PostsList;
 ```
+
+---
+
+## Tags
+
+### Providing Tags
+
+### Invalidating Tags
+
+### Tag helper functions
