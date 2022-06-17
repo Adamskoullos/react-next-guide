@@ -290,8 +290,92 @@ export default PostsList;
 
 ## Tags
 
+We add cache tags into the api for each piece of data. This way we can tell RTK query when we need to refetch the data and update the store. Using tags we can tell query to either update a whole list or a specific list item.
+
+Within `createApi` we can add tags for each piece/type of data, in this case `Post` and `User`:
+
+```js
+export const apiSlice = createApi({
+  reducerPath: "api",
+  baseQuery: fetchBaseQuery({ baseUrl: "url" }),
+  tagTypes: ["Post", "User"],
+  endpoints: (builder) => ({}),
+});
+```
+
 ### Providing Tags
 
+Then within `query` requests we use `providesTags` to tell query we are overiding the stored cache (if any) for a specific tag.
+
+The below example uses a function that automatically has the returned value form `transformResponse` passed in as `result`. The first object in the returned array has an id of `LIST` and signifies all items, then an object for each post is created:
+
+```js
+getPosts: builder.query({
+  query: () => "/posts",
+  transformResponse: (responseData) => {
+    let min = 1;
+    const loadedPosts = responseData.map((post) => {
+      if (!post?.date)
+        post.date = sub(new Date(), { minutes: min++ }).toISOString();
+      if (!post?.reactions)
+        post.reactions = {
+          thumbsUp: 0,
+          wow: 0,
+          heart: 0,
+          rocket: 0,
+          coffee: 0,
+        };
+      return post;
+    });
+    return postsAdapter.setAll(initialState, loadedPosts);
+  },
+  providesTags: (result, error, arg) => [
+    { type: "Post", id: "LIST" },
+    ...result.ids.map((id) => ({ type: "Post", id })),
+  ],
+}),
+```
+
 ### Invalidating Tags
+
+We use `invalidatesTags` for all `mutation` requests, in the example below we are adding a new post to the list, we use the `LIST` id/flag to tell query to refetch the whole list and replace the cache:
+
+```js
+addNewPost: builder.mutation({
+  query: (initialPost) => ({
+    url: "/posts",
+    method: "POST",
+    body: {
+      ...initialPost,
+      userId: Number(initialPost.userId),
+      date: new Date().toISOString(),
+      reactions: {
+        thumbsUp: 0,
+        wow: 0,
+        heart: 0,
+        rocket: 0,
+        coffee: 0,
+      },
+    },
+  }),
+  invalidatesTags: [{ type: "Post", id: "LIST" }],
+}),
+```
+
+When updating a single item we can use the following pattern, utilising the 3rd argument which is the post passed into the query to be updated and from this we grab the `id`. This tells query to only update the cache for this specific item:
+
+```js
+updatePost: builder.mutation({
+  query: (initialPost) => ({
+    url: `/posts/${initialPost.id}`,
+    method: "PUT",
+    body: {
+      ...initialPost,
+      date: new Date().toISOString(),
+    },
+  }),
+  invalidatesTags: (result, error, arg) => [{ type: "Post", id: arg.id }],
+}),
+```
 
 ### Tag helper functions
