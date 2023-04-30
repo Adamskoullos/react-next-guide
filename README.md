@@ -11,6 +11,8 @@ Toc:
   - [React - TS Context/Reducer Model](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/ts-context-reducer.md)
   - [RTK - TS Basics](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/0-basics.md)
   - [RTK - TS createAsyncThunk](https://github.com/Adamskoullos/react-dojo-projects/blob/main/notes/redux-tk-ts/thunk.md) Needs second pass to dial in the typing for each workflow and options handling
+  
+  - [Efficient React State Management Patterns](https://github.com/jherr/fast-react-context/tree/main/fast-context-generic/src)
 
 ---
 
